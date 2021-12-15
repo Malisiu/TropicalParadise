@@ -221,6 +221,59 @@ body {
 	}
 }
 
+.islands {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: $pure-white;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.islands__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.islands__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+			&--first {
+				background-image: $light-blue-gradient, url('../img/boat-ge36892c01_640.jpg');
+			}
+			&--second {
+				background-image: $blue-gradient, url('../img/bora-bora-g00dce4454_640.jpg');
+			}
+			&--third {
+				background-image: $purple-gradient, url('../img/hawaii-g8da53b896_640.jpg');
+			}
+			&-title {
+				font-family: 'Dancing Script', cursive;
+				font-size: 2.8rem;
+			}
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+
+				i {
+					margin-right: .3em;
+				}
+			}
+		}
+	}
+}
+
 // MEDIA
 
 @media (min-width: 576px) {
@@ -283,7 +336,7 @@ body {
 			width: 70%;
 		}
 
-		&__text{
+		&__text {
 			font-size: 2.2rem;
 		}
 	}
@@ -329,7 +382,7 @@ body {
 	.hero-img {
 		padding: 40rem 2em;
 		@include heroImages('../img/wyspa-big.jpg');
-		&__title{
+		&__title {
 			font-size: 7.2rem;
 		}
 		hr {
