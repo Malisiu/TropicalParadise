@@ -119,6 +119,20 @@ body {
 	}
 }
 
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(500%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
+	
+}
+
 // HEADER
 
 .header {
