@@ -142,6 +142,7 @@ body {
 	text-align: center;
 	color: $pure-white;
 	@include heroImages('../img/header-mini.jpg');
+	background-attachment: scroll;
 
 	&__heading {
 		font-family: 'Dancing Script', cursive;
@@ -182,18 +183,48 @@ body {
 	}
 
 	&__title {
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 	}
 
 	&__text {
 		font-size: 1.4rem;
 	}
 }
+.section-heading {
+	position: relative;
+	margin-bottom: 2em;
+	font-size: 3rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	color: $main-color;
+}
 
+.section-padding {
+	padding: 6em 2em;
+}
+
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages('../img/wyspa-mini.jpg');
+	text-align: center;
+	color: $pure-white;
+	overflow: hidden;
+	&__title {
+		font-family: 'Dancing Script', cursive;
+		font-size: 4.8rem;
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		padding: 1em 0;
+	}
+}
+
+// MEDIA
 
 @media (min-width: 576px) {
 	.dreams {
-
 		&__box {
 			flex-direction: row;
 			justify-content: space-between;
@@ -217,11 +248,8 @@ body {
 			margin-bottom: 0;
 			max-height: 300px;
 		}
-
 	}
 }
-
-// MEDIA
 
 @media (min-width: 768px) {
 	.white-block {
@@ -247,8 +275,18 @@ body {
 			font-size: 1.8rem;
 		}
 	}
+	.hero-img {
+		padding: 30rem 2em;
 
-	
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		&__text{
+			font-size: 2.2rem;
+		}
+	}
 }
 @media (min-width: 992px) {
 	.burger-btn {
@@ -274,7 +312,6 @@ body {
 		&__box {
 			margin: 5em 0;
 
-
 			&-text {
 				display: flex;
 				flex-direction: column;
@@ -289,20 +326,17 @@ body {
 			font-size: 2.2rem;
 		}
 	}
-}
-
-.section-heading {
-	position: relative;
-	margin-bottom: 2em;
-	font-size: 3rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	text-align: center;
-	color: $main-color;
-}
-
-.section-padding {
-	padding: 6em 2em;
+	.hero-img {
+		padding: 40rem 2em;
+		@include heroImages('../img/wyspa-big.jpg');
+		&__title{
+			font-size: 7.2rem;
+		}
+		hr {
+			width: 60%;
+			max-width: 900px;
+		}
+	}
 }
 
 @media (min-width: 768px) {
