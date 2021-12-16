@@ -423,35 +423,6 @@ body {
   background-color: #0fe29c;
 }
 
-@media (min-width: 576px) {
-  .dreams__box {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .dreams__box-text {
-    width: 55%;
-  }
-  .dreams__box-text--right {
-    text-align: right;
-  }
-  .dreams__box-img {
-    width: 40%;
-  }
-  .dreams__box-img--right {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .dreams__img {
-    margin-bottom: 0;
-    max-height: 300px;
-  }
-}
 .offers {
   position: relative;
   background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/heroOffers-mini.jpg");
@@ -483,6 +454,8 @@ body {
 }
 .offers__option-info {
   padding: 2em;
+  background-color: #fff;
+  z-index: 10;
 }
 .offers__option-heading {
   text-align: center;
@@ -511,6 +484,71 @@ body {
   background-color: #164dcc;
 }
 
+@media (min-width: 576px) {
+  .dreams__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .dreams__box-text {
+    width: 55%;
+  }
+  .dreams__box-text--right {
+    text-align: right;
+  }
+  .dreams__box-img {
+    width: 40%;
+  }
+  .dreams__box-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .dreams__img {
+    margin-bottom: 0;
+    max-height: 300px;
+  }
+
+  .offers__option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .offers__option-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
+  .offers__option-btn {
+    padding: 1em;
+  }
+}
 @media (min-width: 768px) {
   .white-block {
     height: 50px;
@@ -614,6 +652,18 @@ body {
 
   .islands__card {
     width: 30%;
+  }
+
+  .offers {
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/heroOffers-big.jpg");
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .offers__option-text {
+    font-style: 1.5rem;
   }
 }
 @media (min-width: 768px) {

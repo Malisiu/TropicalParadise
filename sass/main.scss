@@ -326,6 +326,62 @@ body {
 	}
 }
 
+.offers {
+	position: relative;
+	@include heroImages('../img/heroOffers-mini.jpg');
+	overflow: hidden;
+	.section-heading {
+		color: $pure-white;
+	}
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2e2e;
+		background-color: $pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+			background-color: $pure-white;
+			z-index: 10;
+		}
+
+		&-heading {
+			text-align: center;
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: $dark;
+		}
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: $pure-white;
+			background-color: $main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background-color 1s;
+			&::before {
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
+
 // MEDIA
 
 @media (min-width: 576px) {
@@ -354,62 +410,38 @@ body {
 			max-height: 300px;
 		}
 	}
-}
 
-.offers {
-	position: relative;
-	@include heroImages ('../img/heroOffers-mini.jpg');
-	overflow: hidden;
-	.section-heading {
-		color: $pure-white;
-	}
-	&__option {
-		margin: 1em 0;
-		box-shadow: 5px 5px 10px #2e2e2e2e;
-		background-color: $pure-white;
-		overflow: hidden;
-
-		&-img {
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
 			width: 100%;
-			transition: transform .3s;
 
-			&:hover {
-				transform: scale(1.1);
+			&-img {
+				width: 50%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
 			}
-		}
 
-		&-info {
-			padding: 2em;
-		}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
 
-		&-heading {
-			text-align: center;
-			margin-bottom: .5em ;
-			font-size: 2.4rem;
-			font-weight: 300;
-		}
-		&-text {
-			margin-bottom: 0.5em;
-			font-size: 1.3rem;
-			color: $dark;
-		}
-		&-btn {
-			margin-top: 1em;
-			padding: 0.8em;
-			width: 100%;
-			color: $pure-white;
-			background-color: $main-color;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: background-color 1s;
-			&::before {
-				background-color: $secondary-color;
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+
+			&-btn {
+				padding: 1em;
 			}
 		}
 	}
-
-	
 }
 
 @media (min-width: 768px) {
@@ -512,8 +544,21 @@ body {
 	}
 	.islands {
 		&__card {
-			
 			width: 30%;
+		}
+	}
+
+	.offers {
+		background-image: $blue-gradient, url('../img/heroOffers-big.jpg');
+		&__option {
+			&-img {
+				object-fit: cover;
+				height: 300px;
+			}
+
+			&-text {
+				font-style: 1.5rem;
+			}
 		}
 	}
 }
