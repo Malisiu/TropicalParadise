@@ -21,6 +21,7 @@ body {
 	font-size: 1.6rem;
 }
 
+
 // NAV
 
 .burger-btn {
@@ -70,6 +71,12 @@ body {
 	.burger-btn:hover &__bars::before {
 		width: 100%;
 	}
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
 }
 
 .nav {
@@ -452,10 +459,10 @@ body {
 	}
 
 	&__form-input {
-		@include contactForm ;
+		@include contactForm;
 	}
 	&__form-textarea {
-		@include contactForm ;
+		@include contactForm;
 		max-width: 100%;
 		width: 100%;
 		min-height: 150px;
@@ -466,18 +473,17 @@ body {
 		padding: 1em;
 		width: 100%;
 		max-width: 300px;
-		color:$pure-white ;
+		color: $pure-white;
 		border: none;
 		border-radius: 8px;
 		background-color: $main-color;
 		cursor: pointer;
-		transition: background-color .3s;
+		transition: background-color 0.3s;
 		&::before {
 			background-color: $secondary-color;
 		}
 	}
 }
-
 
 .footer {
 	color: $pure-white;
@@ -509,9 +515,9 @@ body {
 		color: $pure-white;
 		font-size: 3.6rem;
 		text-decoration: none;
-		transition: color .3s;
+		transition: color 0.3s;
 
-		&:first-child{
+		&:first-child {
 			padding-left: 0;
 		}
 
@@ -524,8 +530,6 @@ body {
 		padding: 2em;
 		text-align: center;
 	}
-
-	
 }
 
 // MEDIA
@@ -640,11 +644,9 @@ body {
 	}
 
 	.footer {
-
 		&__boxes {
 			display: flex;
 			justify-content: space-between;
-			
 		}
 
 		&__box-desktop {
@@ -662,7 +664,6 @@ body {
 
 		&__box-title {
 			font-size: 2.4rem;
-
 		}
 		&__box-list {
 			list-style: none;

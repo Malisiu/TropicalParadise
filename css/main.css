@@ -123,6 +123,12 @@ body {
   width: 100%;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #2e2e2e;
+}
+
 .nav {
   position: fixed;
   top: 0;
